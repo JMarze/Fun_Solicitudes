@@ -31,6 +31,10 @@ class User extends Authenticatable
      * Relationships
      */
     public function privilegios(){
-        return $this->belongsToMany('App\Privilegio');
+        return $this->belongsToMany('App\Privilegio', 'user_privilegio');
+    }
+
+    public function empleado(){
+        return $this->hasOne('App\Empleado');
     }
 }

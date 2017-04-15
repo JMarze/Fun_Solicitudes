@@ -19,4 +19,12 @@ class Empleado extends Model
     public function cargo(){
         return $this->belongsTo('App\Cargo');
     }
+
+    public function sede(){
+        return $this->belongsTo('App\Sede');
+    }
+
+    public function usuaio(){
+        return $this->belongsTo('App\User');
+    }
 }

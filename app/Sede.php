@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Privilegio extends Model
+class Sede extends Model
 {
-    protected $table = 'privilegios';
+    protected $table = 'sedes';
 
     public $timestamps = false;
 
@@ -15,7 +15,7 @@ class Privilegio extends Model
     /*
      * Relationships
      */
-    public function usuarios(){
-        return $this->belongsToMany('App\User', 'user_privilegio');
+    public function empleados(){
+        return $this->hasMany('App\Empleado');
     }
 }
